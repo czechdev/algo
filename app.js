@@ -2,7 +2,6 @@ const answer = arr => {
     let lengArr = []
     let resultArr = []
     arr.sort((a, b) => a - b)
-    console.log(arr)
     let leng = 1
     for (let i = 0; i < arr.length; i++) {
         if(arr[i] === arr[i + 1]) {
@@ -13,7 +12,6 @@ const answer = arr => {
             leng = 1
         }
     }
-    console.log(lengArr)
     for (let j = 0; j < lengArr.length; j++) {
         if (lengArr[j] > 1) {
             resultArr.push(arr.splice(0, lengArr[j]))
@@ -23,7 +21,5 @@ const answer = arr => {
             arr.shift()
         }  
     }
-    
-    console.log(resultArr)
     return resultArr
 }
